@@ -290,6 +290,13 @@
   }, { threshold: 0.1 });
   boxes.forEach(box => observer.observe(box));
 </script>
-
+<script>
+  // Disable right-click on the audio player elements
+  document.querySelectorAll('audio').forEach(audio => {
+    audio.addEventListener('contextmenu', event => {
+      event.preventDefault();  // This blocks the right-click context menu
+    });
+  });
+</script>
 </body>
 </html>
