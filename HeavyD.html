@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heavy D Studio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap');
+
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      color: #333;
+      background: #f2f2f2;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ff416c, #ff4b2b);
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 { 
+      margin: 0; 
+      font-family: 'Pacifico', cursive;
+      font-size: 3em; 
+      text-shadow: 2px 2px #222;
+    }
+    header p { font-size: 1.2em; margin-top: 10px; }
+
+    nav {
+      background: #222;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 12px 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #ff4b2b; }
+
+    section { padding: 50px 20px; max-width: 1100px; margin: auto; }
+    h2 { text-align: center; margin-bottom: 40px; font-size: 2.5em; color: #222; }
+
+    .services, .invoices {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+    }
+
+    .service-box, .invoice-box {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      flex: 1 1 300px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service-box:hover, .invoice-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    }
+
+    .service-box h3, .invoice-box h3 { color: #ff4b2b; font-size: 1.5em; }
+
+    .service-box ul { padding-left: 20px; }
+    .service-box li { margin-bottom: 6px; }
+
+    .invoice-box table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+    .invoice-box th, .invoice-box td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    .invoice-box th { background: #ff4b2b; color: #fff; }
+    .total-row td { font-weight: bold; }
+
+    footer { background: #222; color: #fff; text-align: center; padding: 25px; font-size: 0.9em; }
+    a { color: #ff4b2b; font-weight: bold; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Animate sections on scroll */
+    .service-box, .invoice-box {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Heavy D Studio</h1>
+  <p>Recording, Mixing, Mastering & Full Jingle Production</p>
+</header>
+
+<nav>
+  <a href="#services">Services</a>
+  <a href="#invoices">Example Invoices</a>
+  <a href="#contracts">Contracts</a>
+</nav>
+
+<!-- Services Section -->
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service-box">
+      <h3>Voice-Over Recording</h3>
+      <p>Professional voice-over recording, editing, mixing, and mastering for commercials, videos, or podcasts. Up to 4 revisions included.</p>
+    </div>
+    <div class="service-box">
+      <h3>Commercial Jingles (Pre-Written)</h3>
+      <p>Recording, mixing, and mastering of pre-written commercial jingles for ads, social media campaigns, and radio spots.</p>
+    </div>
+    <div class="service-box">
+      <h3>Full-Creation Jingles</h3>
+      <p>Studio creates all music, lyrics, vocals, and production for custom jingles. Includes recording, mixing, mastering, and up to 4 revisions.</p>
+    </div>
+    <div class="service-box">
+      <h3>Band Recording Services</h3>
+      <ul>
+        <li>Live full-band tracking sessions</li>
+        <li>Individual instrument tracking</li>
+        <li>Overdubs and layering</li>
+        <li>EP / LP bundle deals with discounts (EP: 15%, LP: 25%)</li>
+        <li>Mixing & mastering included</li>
+        <li>Up to 4 mix revisions; additional $5 per revision</li>
+      </ul>
+      <p>Hourly rates: Recording $35/hr, Mixing $40/track, Mastering $25/track. Deposit 35% required.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Example Invoices Section -->
+<section id="invoices">
+  <h2>Example Invoices & Quotes</h2>
+  <div class="invoices">
+    <!-- Voice-Over Invoice -->
+    <div class="invoice-box">
+      <h3>Voice-Over Project</h3>
+      <p><strong>Client:</strong> Jane Doe</p>
+      <p><strong>Date:</strong> 03/25/2026 | <strong>Invoice #:</strong> VO-001</p>
+      <table>
+        <tr><th>Service</th><th>Qty / Hours</th><th>Rate</th><th>Total</th></tr>
+        <tr><td>Recording / Tracking</td><td>2 hr</td><td>$35/hr</td><td>$70</td></tr>
+        <tr><td>Mixing</td><td>1 track</td><td>$40/track</td><td>$40</td></tr>
+        <tr><td>Mastering</td><td>1 track</td><td>$25/track</td><td>$25</td></tr>
+        <tr><td>Additional Revisions</td><td>1</td><td>$5 each</td><td>$5</td></tr>
+        <tr class="total-row"><td colspan="3">Subtotal</td><td>$140</td></tr>
+        <tr class="total-row"><td colspan="3">Deposit (35%)</td><td>$49</td></tr>
+        <tr class="total-row"><td colspan="3">Balance Due</td><td>$91</td></tr>
+      </table>
+    </div>
+
+    <!-- Pre-Written Jingle Invoice -->
+    <div class="invoice-box">
+      <h3>Pre-Written Jingle</h3>
+      <p><strong>Client:</strong> Acme Corp</p>
+      <p><strong>Date:</strong> 03/25/2026 | <strong>Invoice #:</strong> JG-001</p>
+      <table>
+        <tr><th>Service</th><th>Qty / Hours</th><th>Rate</th><th>Total</th></tr>
+        <tr><td>Recording / Tracking</td><td>3 hr</td><td>$35/hr</td><td>$105</td></tr>
+        <tr><td>Mixing</td><td>1 track</td><td>$40/track</td><td>$40</td></tr>
+        <tr><td>Mastering</td><td>1 track</td><td>$25/track</td><td>$25</td></tr>
+        <tr class="total-row"><td colspan="3">Subtotal</td><td>$170</td></tr>
+        <tr class="total-row"><td colspan="3">Deposit (35%)</td><td>$59.50</td></tr>
+        <tr class="total-row"><td colspan="3">Balance Due</td><td>$110.50</td></tr>
+      </table>
+    </div>
+
+    <!-- Full-Creation Jingle Invoice -->
+    <div class="invoice-box">
+      <h3>Full-Creation Jingle</h3>
+      <p><strong>Client:</strong> XYZ Marketing</p>
+      <p><strong>Date:</strong> 03/25/2026 | <strong>Invoice #:</strong> FCJ-001</p>
+      <table>
+        <tr><th>Service</th><th>Qty / Hours</th><th>Rate</th><th>Total</th></tr>
+        <tr><td>Full Music / Lyrics Creation</td><td>1 project</td><td>$300 flat</td><td>$300</td></tr>
+        <tr><td>Recording / Tracking</td><td>4 hr</td><td>$35/hr</td><td>$140</td></tr>
+        <tr><td>Mixing</td><td>1 track</td><td>$40/track</td><td>$40</td></tr>
+        <tr><td>Mastering</td><td>1 track</td><td>$25/track</td><td>$25</td></tr>
+        <tr class="total-row"><td colspan="3">Subtotal</td><td>$505</td></tr>
+        <tr class="total-row"><td colspan="3">Deposit (35%)</td><td>$176.75</td></tr>
+        <tr class="total-row"><td colspan="3">Balance Due</td><td>$328.25</td></tr>
+      </table>
+    </div>
+
+    <!-- Single Band Song Recording Invoice -->
+    <div class="invoice-box">
+      <h3>Single Band Song Recording</h3>
+      <p><strong>Client:</strong> The Rockers</p>
+      <p><strong>Date:</strong> 03/25/2026 | <strong>Invoice #:</strong> SBR-001</p>
+      <table>
+        <tr><th>Service</th><th>Qty / Hours</th><th>Rate</th><th>Total</th></tr>
+        <tr><td>Live Band Tracking</td><td>3 hr</td><td>$35/hr</td><td>$105</td></tr>
+        <tr><td>Mixing</td><td>1 track</td><td>$40/track</td><td>$40</td></tr>
+        <tr><td>Mastering</td><td>1 track</td><td>$25/track</td><td>$25</td></tr>
+        <tr class="total-row"><td colspan="3">Subtotal</td><td>$170</td></tr>
+        <tr class="total-row"><td colspan="3">Deposit (35%)</td><td>$59.50</td></tr>
+        <tr class="total-row"><td colspan="3">Balance Due</td><td>$110.50</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<<!-- Contracts Section -->
+<section id="contracts">
+  <h2>Studio Contracts</h2>
+  <div class="services">
+    <div class="service-box">
+      <h3>Voice-Over Recording Contract</h3>
+      <p>Click below to view or download the Voice-Over Recording contract.</p>
+      <a href="/contract_voiceover.pdf" target="_blank">View / Download Contract</a>
+    </div>
+    <div class="service-box">
+      <h3>Pre-Written Jingle Contract</h3>
+      <p>Click below to view or download the Pre-Written Jingle contract.</p>
+      <a href="/contract_jingle_a.pdf" target="_blank">View / Download Contract</a>
+    </div>
+    <div class="service-box">
+      <h3>Full-Creation Jingle Contract</h3>
+      <p>Click below to view or download the Full-Creation Jingle contract.</p>
+      <a href="/contract_jingle_b.pdf" target="_blank">View / Download Contract</a>
+    </div>
+    <div class="service-box">
+      <h3>Band Recording Contract</h3>
+      <p>Click below to view or download the Band Recording contract.</p>
+      <a href="/contract_band.pdf" target="_blank">View / Download Contract</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Heavy D Studio | All Rights Reserved
+</footer>
+
+<script>
+  // Scroll animation for services and invoices
+  const boxes = document.querySelectorAll('.service-box, .invoice-box');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  boxes.forEach(box => observer.observe(box));
+</script>
+
+</body>
+</html>
